@@ -4,22 +4,22 @@ function Container() {
   const [cards, setCards] = useState([
     {
       text: '卡片1',
-      id: "hello",
+      id: "card1",
     },
     {
       text: '卡片2',
-      id: "change",
+      id: "card2",
     },
     {
       text: '卡片3',
-      id: "move",
+      id: "card3",
     },
   ]);
 
   const moveCard = (dragIndex, hoverIndex) => {
     const dragCard = cards[dragIndex];
     const cloneCards = [...cards];
-    cloneCards.slice(dragIndex, 1);
+    cloneCards.splice(dragIndex, 1);
     cloneCards.splice(hoverIndex, 0, dragCard);
     setCards(cloneCards);
   };
