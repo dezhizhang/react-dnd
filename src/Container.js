@@ -16,9 +16,9 @@ function Container() {
     },
   ]);
   return (
-    <div style={{width:300}}>
-      {list.map((item) => (
-        <Card key={item.id} text={item.text} />
+    <div style={{ width: 300 }}>
+      {list.map((item, index) => (
+        <Card key={item.id} text={item.text} id={item.id} index={index} />
       ))}
     </div>
   );
