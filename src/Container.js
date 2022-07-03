@@ -4,15 +4,15 @@ function Container() {
   const [cards, setCards] = useState([
     {
       text: '卡片1',
-      id: 1,
+      id: "hello",
     },
     {
       text: '卡片2',
-      id: 2,
+      id: "change",
     },
     {
       text: '卡片3',
-      id: 3,
+      id: "move",
     },
   ]);
 

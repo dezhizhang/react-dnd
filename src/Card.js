@@ -13,7 +13,7 @@ const style = {
 function Card({ text, id, index, moveCard }) {
   const ref = useRef();
 
-  useDrop({
+  const [,drop] = useDrop({
     accept: types.Card,
     collect: () => ({}),
     hover(item, monitor) {
@@ -45,7 +45,8 @@ function Card({ text, id, index, moveCard }) {
   });
   const opacity = isDragging ? 0.1 : 1;
   drag(ref);
-
+  drop(ref);
+  
   return (
     <div ref={ref} style={{ ...style, opacity }}>
       {text}
